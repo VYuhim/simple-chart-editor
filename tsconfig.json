@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig-extend.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "resolveJsonModule": true
+  }
+}

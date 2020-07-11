@@ -1,0 +1,81 @@
+{
+  "name": "simple-chart-editor",
+  "version": "0.0.1",
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc --noEmit && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "EXTEND_ESLINT=true react-app-rewired start",
+    "build": "react-app-rewired build",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint --color ./src --ext .js,.ts,.tsx && npm run check-types"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.9.11",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/lab": "^4.0.0-alpha.33",
+    "array.prototype.flatmap": "^1.2.3",
+    "classnames": "^2.2.6",
+    "connected-react-router": "^6.6.1",
+    "d3": "^5.15.0",
+    "i18next": "^17.2.0",
+    "react": "^16.13.1",
+    "react-color": "^2.18.0",
+    "react-dom": "^16.13.1",
+    "react-i18next": "^10.13.1",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.9",
+    "@types/d3": "^5.7.2",
+    "@types/eslint": "^6.1.8",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/node": "^14.0.5",
+    "@types/node-sass": "^4.11.0",
+    "@types/prettier": "^2.0.1",
+    "@types/react": "^16.9.17",
+    "@types/react-color": "^3.0.2",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-redux": "^7.1.4",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "customize-cra": "^0.9.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.6",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.2",
+    "react-app-rewired": "^2.1.6",
+    "react-scripts": "^3.4.1",
+    "source-map-explorer": "^2.4.2",
+    "typescript": "^3.9.3",
+    "typescript-plugin-css-modules": "^2.3.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
