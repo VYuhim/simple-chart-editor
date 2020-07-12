@@ -1,6 +1,9 @@
+import { ILine } from 'src/types/chart';
+
 export const CHANGE_CURRENT_LINE = 'CHANGE_CURRENT_LINE';
 export const ADD_LINE_ACTION = 'ADD_LINE_ACTION';
 export const REMOVE_LINE_ACTION = 'REMOVE_LINE_ACTION';
+export const UPDATE_LINE_ACTION = 'UPDATE_LINE_ACTION';
 
 interface IChangeCurrentLineAction {
   type: typeof CHANGE_CURRENT_LINE;
@@ -30,4 +33,16 @@ export const removeLineAction = (id: number | string): IRemoveLineAction => ({
   id,
 });
 
-export type TChartActions = IChangeCurrentLineAction | IAddLineAction | IRemoveLineAction;
+interface IUpdateLineAction {
+  type: typeof UPDATE_LINE_ACTION;
+  id: number | string;
+  settings: Omit<Partial<ILine>, 'id'>;
+}
+
+export const updateLineAction = (id: number | string, settings: Omit<Partial<ILine>, 'id'>): IUpdateLineAction => ({
+  type: UPDATE_LINE_ACTION,
+  id,
+  settings,
+});
+
+export type TChartActions = IChangeCurrentLineAction | IAddLineAction | IRemoveLineAction | IUpdateLineAction;

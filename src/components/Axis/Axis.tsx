@@ -16,6 +16,7 @@ interface IAxisProps {
   tickClassName?: string;
 }
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 export const Axis: React.FC<IAxisProps> = (props) => {
   const { scale, axisType, label, ticks, ticksToFixed = 1, tickFormat, tickClassName = styles.tick } = props;
   const ref = useRef<SVGPathElement>(null);
@@ -64,7 +65,7 @@ export const Axis: React.FC<IAxisProps> = (props) => {
             .selectAll('.tick')
             .select('line')
             .attr('y2', -dimensions.boundedHeight)
-            .attr('stroke', 'var(--chart-label-color)')
+            .attr('stroke', 'gray')
             .attr('stroke-dasharray', '1, 3');
           axis.selectAll('.tick').select('text').attr('transform', 'translate(0, 5)');
           break;
@@ -74,19 +75,9 @@ export const Axis: React.FC<IAxisProps> = (props) => {
             .selectAll('.tick')
             .select('line')
             .attr('x2', dimensions.boundedWidth)
-            .attr('stroke', 'var(--chart-label-color)')
+            .attr('stroke', 'gray')
             .attr('stroke-dasharray', '1, 3');
           axis.selectAll('.tick').select('text').attr('transform', 'translate(-10, 0)');
-          break;
-        case AxisType.right:
-          axis.select('.domain').remove();
-          axis
-            .selectAll('.tick')
-            .select('line')
-            .attr('x2', dimensions.boundedWidth)
-            .attr('stroke', 'var(--chart-label-color)')
-            .attr('stroke-dasharray', '1, 3');
-          axis.selectAll('.tick').select('text').attr('transform', `translate(${dimensions.boundedWidth}, 0)`);
           break;
         default:
           break;
@@ -100,10 +91,6 @@ export const Axis: React.FC<IAxisProps> = (props) => {
         return `translate(${dimensions.boundedWidth / 2}, ${dimensions.margin.bottom - 4})`;
       case AxisType.left:
         return `translate(${14 - dimensions.margin.left}, ${dimensions.boundedHeight / 2}) rotate(270)`;
-      case AxisType.right:
-        return `translate(${dimensions.width - dimensions.margin.right - 14}, ${
-          dimensions.boundedHeight / 2
-        }) rotate(90)`;
       default:
         return '';
     }

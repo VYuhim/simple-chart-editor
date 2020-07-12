@@ -1,6 +1,13 @@
-import { Curve, ILine } from 'src/types/chart';
+import { Curve, FillType, ILine } from 'src/types/chart';
+import { CORE_PRESETS_ID } from 'src/components/Menu/Menu';
 
-import { ADD_LINE_ACTION, CHANGE_CURRENT_LINE, REMOVE_LINE_ACTION, TChartActions } from './chartActions';
+import {
+  ADD_LINE_ACTION,
+  CHANGE_CURRENT_LINE,
+  REMOVE_LINE_ACTION,
+  TChartActions,
+  UPDATE_LINE_ACTION,
+} from './chartActions';
 
 export interface IChartReducerStore {
   currentLine: number | string;
@@ -8,7 +15,7 @@ export interface IChartReducerStore {
 }
 
 const initialState: IChartReducerStore = {
-  currentLine: 'corePresets',
+  currentLine: CORE_PRESETS_ID,
   lines: [],
 };
 
@@ -30,11 +37,41 @@ export const chartReducer = (store: IChartReducerStore = initialState, action: T
           data: [],
           curve: Curve.linear,
           label: 'Новая линия',
+          fillType: FillType.full,
         }),
         currentLine: newId,
       };
     }
-    case REMOVE_LINE_ACTION:
+    case REMOVE_LINE_ACTION: {
+      let currentLine: any = CORE_PRESETS_ID;
+      const lines = store.lines.filter((line, idx, arr) => {
+        const check = line.id !== action.id;
+
+        if (check && arr[idx]?.id) {
+          currentLine = arr[idx].id;
+        }
+
+        return check;
+      });
+
+      return {
+        ...store,
+        lines,
+        currentLine,
+      };
+    }
+    case UPDATE_LINE_ACTION:
+      return {
+        ...store,
+        lines: store.lines.map((line) =>
+          line.id === action.id
+            ? {
+                ...line,
+                ...action.settings,
+              }
+            : line,
+        ),
+      };
     default:
       return store;
   }

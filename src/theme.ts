@@ -20,6 +20,19 @@ export const theme = createMuiTheme({
       labelIcon: {
         minWidth: 'auto',
       },
+      textColorPrimary: {
+        '&$selected': {
+          color: '#1976d2',
+        },
+      },
+    },
+    MuiButton: {
+      containedPrimary: {
+        backgroundColor: '#1976d2',
+        '&:hover': {
+          backgroundColor: '#1768ba',
+        },
+      },
     },
   },
 });

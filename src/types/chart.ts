@@ -1,17 +1,22 @@
 export enum Curve {
   linear,
   basis,
-  monotone,
+  monotoneX,
+  monotoneY,
   natural,
   step,
   stepBefore,
   stepAfter,
 }
 
+export enum FillType {
+  full,
+  dashArray,
+}
+
 export enum AxisType {
   'bottom' = 'axisBottom',
   'left' = 'axisLeft',
-  'right' = 'axisRight',
 }
 
 export interface IChartDimensions {
@@ -36,6 +41,7 @@ export interface ILine {
   id: number;
   label: string;
   color: string;
+  fillType: FillType;
   data: IPoint[];
   curve: Curve;
 }
