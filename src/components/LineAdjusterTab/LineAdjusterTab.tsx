@@ -53,6 +53,7 @@ export const LineAdjusterTab: React.FC<ILineAdjusterTab> = (props) => {
         color={'primary'}
         variant={'contained'}
         className={styles.button}
+        disabled={disabled}
       >
         Удалить
       </Button>

@@ -1,6 +1,6 @@
 {
   "name": "simple-chart-editor",
-  "version": "0.0.1",
+  "homepage": "https://vyuhim.github.io/simple-chart-editor",
   "husky": {
     "hooks": {
       "pre-commit": "tsc --noEmit && lint-staged"
@@ -16,7 +16,9 @@
     "start": "EXTEND_ESLINT=true react-app-rewired start",
     "build": "react-app-rewired build",
     "check-types": "tsc --noEmit",
-    "lint": "eslint --color ./src --ext .js,.ts,.tsx && npm run check-types"
+    "lint": "eslint --color ./src --ext .js,.ts,.tsx && npm run check-types",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.11",
@@ -56,6 +58,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^4.0.4",
     "eslint-plugin-sonarjs": "^0.5.0",
+    "gh-pages": "^3.1.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.6",
     "node-sass": "^4.14.1",

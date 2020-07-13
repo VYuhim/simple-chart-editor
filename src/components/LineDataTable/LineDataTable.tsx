@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import styles from 'src/components/LineAdjusterTab/LineAdjusterTab.module.scss';
 import {
   IconButton,
@@ -23,6 +23,7 @@ interface ILineDataTableProps {
 
 export const LineDataTable: React.FC<ILineDataTableProps> = (props) => {
   const { data, onChange, disabled } = props;
+  const firstInputRef = useRef<HTMLInputElement>(null);
 
   const [selectedLine, setSelectedLine] = useState<null | number>(null);
 
@@ -76,6 +77,7 @@ export const LineDataTable: React.FC<ILineDataTableProps> = (props) => {
         value: Number(newData.value),
       }),
     );
+    firstInputRef.current?.focus();
   };
 
   return (
@@ -141,6 +143,7 @@ export const LineDataTable: React.FC<ILineDataTableProps> = (props) => {
             <TableRow>
               <TableCell>
                 <MInput
+                  inputRef={firstInputRef}
                   defaultValue={lastOffset}
                   value={newData.offset}
                   type={'number'}
