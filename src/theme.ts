@@ -34,5 +34,10 @@ export const theme = createMuiTheme({
         },
       },
     },
+    MuiTooltip: {
+      tooltip: {
+        backgroundColor: 'transparent',
+      },
+    },
   },
 });

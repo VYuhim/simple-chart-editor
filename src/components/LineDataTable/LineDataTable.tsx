@@ -77,7 +77,9 @@ export const LineDataTable: React.FC<ILineDataTableProps> = (props) => {
         value: Number(newData.value),
       }),
     );
-    firstInputRef.current?.focus();
+    setTimeout(() => {
+      firstInputRef.current?.focus();
+    }, 100);
   };
 
   return (
