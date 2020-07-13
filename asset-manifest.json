@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/simple-chart-editor/static/css/main.ba683d45.chunk.css",
-    "main.js": "/simple-chart-editor/static/js/main.1ca11ba3.chunk.js",
-    "main.js.map": "/simple-chart-editor/static/js/main.1ca11ba3.chunk.js.map",
+    "main.css": "/simple-chart-editor/static/css/main.d2df397e.chunk.css",
+    "main.js": "/simple-chart-editor/static/js/main.9b5c4d8a.chunk.js",
+    "main.js.map": "/simple-chart-editor/static/js/main.9b5c4d8a.chunk.js.map",
     "runtime-main.js": "/simple-chart-editor/static/js/runtime-main.c441051f.js",
     "runtime-main.js.map": "/simple-chart-editor/static/js/runtime-main.c441051f.js.map",
-    "static/js/2.d5bca7c5.chunk.js": "/simple-chart-editor/static/js/2.d5bca7c5.chunk.js",
-    "static/js/2.d5bca7c5.chunk.js.map": "/simple-chart-editor/static/js/2.d5bca7c5.chunk.js.map",
+    "static/js/2.47b1ad7a.chunk.js": "/simple-chart-editor/static/js/2.47b1ad7a.chunk.js",
+    "static/js/2.47b1ad7a.chunk.js.map": "/simple-chart-editor/static/js/2.47b1ad7a.chunk.js.map",
     "index.html": "/simple-chart-editor/index.html",
-    "precache-manifest.23809585c285e4db4128e05382bb0345.js": "/simple-chart-editor/precache-manifest.23809585c285e4db4128e05382bb0345.js",
+    "precache-manifest.4d9ee7d4e3da6b9d099bf48b06e0d515.js": "/simple-chart-editor/precache-manifest.4d9ee7d4e3da6b9d099bf48b06e0d515.js",
     "service-worker.js": "/simple-chart-editor/service-worker.js",
-    "static/css/main.ba683d45.chunk.css.map": "/simple-chart-editor/static/css/main.ba683d45.chunk.css.map",
-    "static/js/2.d5bca7c5.chunk.js.LICENSE.txt": "/simple-chart-editor/static/js/2.d5bca7c5.chunk.js.LICENSE.txt"
+    "static/css/main.d2df397e.chunk.css.map": "/simple-chart-editor/static/css/main.d2df397e.chunk.css.map",
+    "static/js/2.47b1ad7a.chunk.js.LICENSE.txt": "/simple-chart-editor/static/js/2.47b1ad7a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c441051f.js",
-    "static/js/2.d5bca7c5.chunk.js",
-    "static/css/main.ba683d45.chunk.css",
-    "static/js/main.1ca11ba3.chunk.js"
+    "static/js/2.47b1ad7a.chunk.js",
+    "static/css/main.d2df397e.chunk.css",
+    "static/js/main.9b5c4d8a.chunk.js"
   ]
 }
