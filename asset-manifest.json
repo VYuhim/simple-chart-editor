@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/simple-chart-editor/static/css/main.ba683d45.chunk.css",
-    "main.js": "/simple-chart-editor/static/js/main.5c90f275.chunk.js",
-    "main.js.map": "/simple-chart-editor/static/js/main.5c90f275.chunk.js.map",
+    "main.js": "/simple-chart-editor/static/js/main.1ca11ba3.chunk.js",
+    "main.js.map": "/simple-chart-editor/static/js/main.1ca11ba3.chunk.js.map",
     "runtime-main.js": "/simple-chart-editor/static/js/runtime-main.c441051f.js",
     "runtime-main.js.map": "/simple-chart-editor/static/js/runtime-main.c441051f.js.map",
     "static/js/2.d5bca7c5.chunk.js": "/simple-chart-editor/static/js/2.d5bca7c5.chunk.js",
     "static/js/2.d5bca7c5.chunk.js.map": "/simple-chart-editor/static/js/2.d5bca7c5.chunk.js.map",
     "index.html": "/simple-chart-editor/index.html",
-    "precache-manifest.7849ef841d6cd112ac32883cc11e2f17.js": "/simple-chart-editor/precache-manifest.7849ef841d6cd112ac32883cc11e2f17.js",
+    "precache-manifest.23809585c285e4db4128e05382bb0345.js": "/simple-chart-editor/precache-manifest.23809585c285e4db4128e05382bb0345.js",
     "service-worker.js": "/simple-chart-editor/service-worker.js",
     "static/css/main.ba683d45.chunk.css.map": "/simple-chart-editor/static/css/main.ba683d45.chunk.css.map",
     "static/js/2.d5bca7c5.chunk.js.LICENSE.txt": "/simple-chart-editor/static/js/2.d5bca7c5.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c441051f.js",
     "static/js/2.d5bca7c5.chunk.js",
     "static/css/main.ba683d45.chunk.css",
-    "static/js/main.5c90f275.chunk.js"
+    "static/js/main.1ca11ba3.chunk.js"
   ]
 }

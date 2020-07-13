@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cbf9592d3ac45142143f0c2572805ae9",
+    "revision": "3196c28d8c64192ec4ff6eaa0600b8cf",
     "url": "/simple-chart-editor/index.html"
   },
   {
-    "revision": "cdd077553d0fbe61c57b",
+    "revision": "d95e3ebe2d2953ef1f8f",
     "url": "/simple-chart-editor/static/css/main.ba683d45.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/simple-chart-editor/static/js/2.d5bca7c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cdd077553d0fbe61c57b",
-    "url": "/simple-chart-editor/static/js/main.5c90f275.chunk.js"
+    "revision": "d95e3ebe2d2953ef1f8f",
+    "url": "/simple-chart-editor/static/js/main.1ca11ba3.chunk.js"
   },
   {
     "revision": "d4f5013d16f2db5dc568",
